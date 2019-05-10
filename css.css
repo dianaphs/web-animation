@@ -1,0 +1,49 @@
+body {
+    background-color: yellow;
+}
+
+
+article {
+    display: grid;
+}
+
+.illustratie {
+}
+
+
+.j:hover {
+    width: 200px;
+}
+
+/* media queries mobiel */
+
+@media (min-width:35em) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+}
+
+/* media queries tablet */
+
+@media (min-width:60em) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-rows: 40% 40% 40%;
+    }
+}
+
+/* media queries desktop */
+
+@media (min-width:80em) {
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(6, 16.6%);
+        grid-template-rows: 60% 40%;
+    }
+}
