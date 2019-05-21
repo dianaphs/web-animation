@@ -1,9 +1,9 @@
 # web-animation
 
 Link naar GitHub pages:
-https://dianaphs.github.io/web-animation/
+<br>https://dianaphs.github.io/web-animation/
 
 
 Bronnen:
-https://keycode.info/
-http://animista.net
+<br>https://keycode.info/
+<br>http://animista.net
