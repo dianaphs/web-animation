@@ -1,5 +1,5 @@
 body {
-    background-color: yellow;
+    background-color: #FFEB27;
 }
 
 h1 {
@@ -11,7 +11,7 @@ article {
     display: grid;
 }
 
-/* illustraties */
+/* hover */
 
 .illustratie {
     margin: 0 auto;
@@ -31,6 +31,7 @@ article {
 
 #paperclip:hover {
     fill: green;
+    width: 100px;
 }
 
 #rits:hover {
@@ -50,47 +51,321 @@ article {
 }
 
 #patroon:hover {
-    fill: coral;    
-}
-
-#vierkant:hover {
-    fill: red;
+    fill: coral;
 }
 
 #hart:hover {
     fill: goldenrod;
 }
 
-#logo:hover {
-    fill: aquamarine;
+#vierkant:hover {
+    fill: blue;
 }
 
-/* media queries mobiel */
+#logo:hover {
+    fill: red;
+}
 
-@media (min-width:320px) {
+/* letter */
 
-    main {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-template-rows: 10%;
+#element1 {
+    transform-origin: center;
+}
+
+#element1.is-active {
+    animation: flip-scale-down-diag-2 1s alternate infinite cubic-bezier(.42, 0, .58, 1);
+}
+
+@keyframes flip-scale-down-diag-2 {
+    0% {
+        transform: scale(1) rotate3d(-1, 1, 0, 0deg);
     }
 
-    /* media queries tablet */
+    50% {
+        transform: scale(0.4) rotate3d(-1, 1, 0, -90deg);
+    }
 
-    @media (min-width:641px) {
+    100% {
+        transform: scale(1) rotate3d(-1, 1, 0, -180deg);
+    }
+}
 
-        main {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            grid-template-rows: 33.33% 33.33% 33.33%;
-        }
+/* elastiek */
 
-        /* media queries desktop */
+#element2 {
+    transform-origin: center;
+}
 
-        @media (min-width:1025px) {
+#element2.is-active {
+    animation: vibrate 0.3s infinite;
+}
 
-            main {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-                grid-template-rows: 60% 40%;
-            }
+@keyframes vibrate {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+/* paperclip */
+#element3 {
+    transform-origin: center;
+}
+
+#element3.is-active {
+    animation: wobble 1.5s infinite;
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+
+
+#element6 {
+    transition: all .5s;
+    transform-origin: center;
+}
+
+#element6.is-active {
+    animation: shake .5s alternate infinite ease-in;
+}
+
+@keyframes shake {
+    from {
+        transform: rotate(-5deg);
+    }
+
+    to {
+        transform: rotate(10deg);
+    }
+}
+
+
+
+/* vlek */
+
+#element7 {
+    transform-origin: center;
+}
+
+#element7.is-active {
+    animation: rotation 1.5s infinite cubic-bezier(0, 1.02, .26, -0.63);
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* vierkant */
+
+#element9 {
+    width: 180px;
+    height: 180px;
+    background-color: #000000;
+}
+
+#element9.is-active {
+    animation: square-to-circle 1.5s infinite alternate;
+}
+
+@keyframes square-to-circle {
+    0% {
+        border-radius: 0 0 0 0;
+    }
+
+    25% {
+        border-radius: 50% 0 0 0;
+    }
+
+    50% {
+        border-radius: 50% 50% 0 0;
+    }
+
+    75% {
+        border-radius: 50% 50% 50% 0;
+    }
+
+    100% {
+        border-radius: 50%;
+    }
+}
+
+
+/* heart */
+
+#ball {
+    transform-origin: center;
+
+}
+
+#ball.is-active {
+    animation: bounce .3s alternate infinite ease-in;
+}
+
+/*
+#ball2 {
+    animation: bounce .3s alternate-reverse infinite ease-in;
+}
+
+#ball3 {
+    animation: bounce .3s alternate initial ease-in;
+}
+*/
+
+@keyframes bounce {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 50px, 0);
+    }
+}
+
+#element4 {
+    clip-path: circle(120px at center);
+}
+
+#rits.is-active {
+    animation: slide-vertical 1s alternate infinite ease-in;
+}
+
+#rits2.is-active {
+    animation: slide-vertical 1s alternate-reverse infinite ease-in;
+}
+
+@keyframes slide-vertical {
+    from {
+        transform: translate3d(0%, -50%, 0);
+    }
+
+    to {
+        transform: translate3d(0%, 0, 0);
+    }
+
+
+}
+
+#element8 {
+    position: absolute;
+    clip-path: polygon(25% 0%, 0% 100%, 50% 100%);
+}
+
+#patroon.is-active {
+    animation: slide-horizontal 1s alternate infinite ease-in;
+}
+
+@keyframes slide-horizontal {
+    from {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0%, 0, 0);
+    }
+
+
+}
+
+/* heart */
+
+#element10 {
+    transform-origin: center;
+
+}
+
+#element10.is-active {
+    animation: heartbeat .5s alternate infinite ease-in;
+}
+
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.7);
+    }
+}
+
+
+/* logo */
+
+#element11.is-active {
+    animation: flash 2s infinite;
+}
+
+@keyframes flash {
+
+    from,
+    50%,
+    to {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    grid-template-rows: 50vh 50vh;
+}
