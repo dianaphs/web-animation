@@ -6,7 +6,7 @@ body {
 main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-    grid-template-rows: 50vh 50vh;
+    grid-template-rows: 350px 350px;
 }
 
 h1 {
@@ -44,7 +44,6 @@ article {
     display: grid;
 }
 
-
 /* letter */
 
 #element1 {
@@ -69,7 +68,7 @@ article {
     }
 }
 
-/* elastiek */
+/* hand */
 
 #element2 {
     transform-origin: center;
@@ -112,6 +111,7 @@ article {
 }
 
 /* paperclip */
+
 #element3 {
     transform-origin: center;
 }
@@ -157,7 +157,6 @@ article {
 }
 
 
-
 #element6 {
     transition: all .5s;
     transform-origin: center;
@@ -178,8 +177,6 @@ article {
     }
 }
 
-
-
 /* vlek */
 
 #element7 {
@@ -199,8 +196,6 @@ article {
         transform: rotate(360deg);
     }
 }
-
-/* vierkant */
 
 #element9 {
     width: 180px;
@@ -234,8 +229,6 @@ article {
     }
 }
 
-
-/* heart */
 
 .ball {
     transform-origin: center;
@@ -284,9 +277,8 @@ article {
     to {
         transform: translate3d(0%, 0, 0);
     }
-
-
 }
+
 
 #element8 {
     position: absolute;
@@ -305,11 +297,8 @@ article {
     to {
         transform: translate3d(0%, 0, 0);
     }
-
-
 }
 
-/* heart */
 
 #element10 {
     transform-origin: center;
@@ -320,7 +309,6 @@ article {
     animation: heartbeat .5s alternate infinite ease-in;
 }
 
-
 @keyframes heartbeat {
     0% {
         transform: scale(1);
@@ -330,9 +318,6 @@ article {
         transform: scale(.7);
     }
 }
-
-
-/* logo */
 
 #element11.is-active {
     animation: flash 2s infinite;
