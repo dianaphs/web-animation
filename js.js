@@ -1,15 +1,16 @@
-document.querySelectorAll("#element1, #element2, #element3, #element4, #element5, #element6, #element7, #element8, #element9, #element10, #element11, #patroon, #rits, #rits2, #ball1, #ball2, #ball3").forEach(function (element) {
+document.querySelectorAll("#element1, #element2, #element3, #element4, #element5, #element6, #element7, #element8, #element9, #element10, #element11, #patroon, #rits, #rits2").forEach(function (element) {
     element.addEventListener("click", function () {
         element.classList.toggle("is-active");
     });
 });
 
-document.querySelectorAll('#ball1, #ball2').forEach(function (element) {
+document.querySelectorAll(".ball, .ball2, .ball3").forEach(function (element) {
     element.addEventListener('click', function () {
         console.log(element);
         element.classList.toggle('is-active');
     })
 })
+
 
 document.onkeyup = function (e) {
     if (e.keyCode === 65) {
@@ -25,7 +26,13 @@ document.onkeyup = function (e) {
         document.getElementById("rits").classList.toggle("is-active");
     }
     if (e.keyCode === 69) {
-        document.getElementById("ball").classList.toggle("is-active");
+        document.querySelector(".ball").classList.toggle("is-active");
+    }
+    if (e.keyCode === 69) {
+        document.querySelector(".ball2").classList.toggle("is-active");
+    }
+    if (e.keyCode === 69) {
+        document.querySelector(".ball3").classList.toggle("is-active");
     }
     if (e.keyCode === 70) {
         document.getElementById("element6").classList.toggle("is-active");
