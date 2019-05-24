@@ -1,9 +1,5 @@
 # web-animation
 
-<b>Link naar GitHub pages:</b><br>
-https://dianaphs.github.io/web-animation/
-<br>
-
 De poster die ik heb gekozen is een omslag van een magazine genaamd Form, deze editie werd gemaakt in 1959 door de ontwerper John Melin en Anders Osterlin. De originele cover (https://drive.google.com/open?id=10OZg5Qce7xQ5ABUJ1N7OXpq5wrH88rtU) bevat veel verschillende illustraties, voor deze opdracht heb ik gekozen om een gedeelte van de omslag te pakken.
 
 <b>Kleur</b><br>
@@ -23,3 +19,6 @@ CSS Grid Layout: The Fr Unit. https://alligator.io/css/css-grid-layout-fr-wunit/
 JavaScript Event KeyCodes. https://keycode.info/<br>
 w3schools.com. (z.d.). https://www.w3schools.com/howto/howto_js_toggle_class.asp
 
+<b>Link naar GitHub pages:</b><br>
+https://dianaphs.github.io/web-animation/
+<br>
